@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CoutMerge Web (Railway)</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-900 text-gray-100">
+  <div class="max-w-4xl mx-auto p-6">
+    <h1 class="text-2xl font-bold mb-4">📑 CoutMerge Web (Railway)</h1>
+
+    <div class="p-4 bg-gray-800 rounded-lg">
+      <p class="mb-2">Selecione arquivos (PDF, JPG, JPEG, PNG). Se os arquivos possuem sufixo <code>_PD</code>, serão agrupados por identificador, caso contrário todos serão mesclados juntos.</p>
+      <input id="fileinput" type="file" multiple />
+      <button id="btnUpload" class="mt-3 px-4 py-2 bg-green-500 rounded">Enviar e Processar</button>
+
+      <div id="status" class="mt-4 text-sm text-gray-300">Aguardando envio...</div>
+
+      <div class="mt-4">
+        <progress id="progress" max="1" value="0" style="width:100%"></progress>
+        <div id="log" class="mt-2 text-xs font-mono h-36 overflow-auto bg-black/40 p-2 rounded"></div>
+      </div>
+
+      <div class="mt-4" id="links" style="display:none;">
+        <a id="merged" class="inline-block bg-blue-600 px-3 py-2 rounded mr-2" href="#" target="_blank">Baixar PDF mesclado</a>
+        <a id="txt" class="inline-block bg-gray-600 px-3 py-2 rounded mr-2" href="#" target="_blank">Baixar log.txt</a>
+        <a id="csv" class="inline-block bg-gray-600 px-3 py-2 rounded mr-2" href="#" target="_blank">Baixar log.csv</a>
+        <a id="pdf" class="inline-block bg-gray-600 px-3 py-2 rounded" href="#" target="_blank">Baixar log.pdf</a>
+        <div class="mt-2"><a id="zip" class="inline-block bg-green-700 px-3 py-2 rounded" href="#" target="_blank">Download ZIP completo</a></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/main.js"></script>
+</body>
+</html>
